@@ -1,0 +1,81 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Increase specificity to override Bootstrap's default styles */
+.container .row .form-group input.form-control.my-width {
+  width: 80%;
+  /* Adjust the width as needed */
+}
+
+.container h2 {
+  font-size: 35px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+#Update_Address {
+  display: none;
+}
+#crudTable tbody tr td:nth-child(2){
+  width: 80%;
+}
+#toast {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: #e95b3f;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  z-index: 9999;
+  animation: slideInRight 0.5s ease-in-out, fadeOut 0.5s ease-in-out 2.5s;
+  font-size: 16px;
+  font-weight: 600;
+}
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+
+/* Media query for screens with a maximum width of 780px */
+@media(max-width:780px) {
+
+  .container .row .form-group input.form-control.my-width {
+    width: 90%;
+    padding: 14px;
+    /* Adjust the width as needed */
+  }
+}
+
+@media (max-width:400px) {
+  .container h2 {
+    font-size: 25px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  #crudTable tbody tr td:nth-child(3) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+   
+  }
+  #crudTable tbody tr td:nth-child(3) button{
+    width: 80px;
+  }
+ 
+  
+}
